@@ -1,0 +1,46 @@
+.layout {
+  height: 100%;
+
+  .header {
+    font-size: 42px;
+    font-weight: 700;
+    color: #fff;
+    font-style: italic;
+    text-shadow: 1px 1px 2px #f9f9f9;
+  }
+
+  .content {
+    margin: auto;
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+
+    img {
+      width: 300px;
+      height: 300px;
+      margin: 0px auto;
+    }
+
+    code {
+      padding: 5px 12px;
+      background-color: #ddd;
+      border-radius: 5px;
+    }
+
+    div {
+      margin: 8px auto;
+
+      & > span {
+        margin-right: 12px;
+      }
+    }
+  }
+
+  .footer,
+  .header {
+    text-align: center;
+  }
+}

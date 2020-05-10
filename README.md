@@ -21,3 +21,14 @@ webpack 相关知识点练习
   + 通过 babel-traverse 的 ImportDeclaration 方法获取依赖属性
 * 生成JS文件可以在浏览器中运行
 
+## ssr 服务器渲染
+
+### 操作步骤
+
+```shell
+
+# npm run build:ssr
+
+# npm run dev:ssr
+
+```
