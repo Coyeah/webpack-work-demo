@@ -32,3 +32,18 @@ webpack 相关知识点练习
 # npm run dev:ssr
 
 ```
+
+## loader 插件编写
+
+使用 `loader-runner` 调试 loader。loader 参数的获取，通过 `loader-utils` 的 `getOptions` 方法获取。
+
+webpack 默认开启 loader 缓存，可使用 `this.cacheable(false)` 关掉缓存；缓存条件：loader 的结果在相同的输入下有确定的值，有依赖的 loader 无法使用缓存；
+
+loader 通过 `this.emitFile` 进行文件写入；
+
+异常处理：
+
+1、直接通过 throw 抛出；
+2、通过 `this.callback` 传递错误；
+
+异步处理：通过 `this.async` 来返回一个异步函数；
