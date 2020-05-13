@@ -33,7 +33,7 @@ webpack 相关知识点练习
 
 ```
 
-## loader 插件编写
+## loader
 
 使用 `loader-runner` 调试 loader。loader 参数的获取，通过 `loader-utils` 的 `getOptions` 方法获取。
 
@@ -47,3 +47,14 @@ loader 通过 `this.emitFile` 进行文件写入；
 2、通过 `this.callback` 传递错误；
 
 异步处理：通过 `this.async` 来返回一个异步函数；
+
+## plugin
+
+运行环境：没有像 loader 那样的运行环境；只能在 webpack 里面运行；
+
+错误处理：
+
+1、参数校验阶段可以直接 throw 的方式抛出；
+2、通过 `compilation` 对象的 warnings 和 errors 接收；
+
+通过 `compilation` 进行文件写入。
