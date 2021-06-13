@@ -31,6 +31,8 @@ module.exports = class ZipPlugin {
             outputPath
           );
 
+          console.log(content);
+
           compilation.assets[outputRelativePath] = new RawSource(content);
 
           callback();
